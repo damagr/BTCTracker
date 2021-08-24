@@ -35,7 +35,7 @@ client.once("ready", () => {
   setInterval(async () => {
     getPrice();
     BOT.user.setActivity("BTC: " + lastPrice);
-  }, 5000);
+  }, 10000);
 });
 
 function getPrice() {
