@@ -34,7 +34,7 @@ client.once("ready", () => {
 
   setInterval(async () => {
     getPrice();
-    BOT.user.setActivity("BTC: " + lastPrice);
+    BOT.user.setActivity("BTC: " + lastPrice, { type: "WATCHING" }).catch(console.error);
   }, 10000);
 });
 
