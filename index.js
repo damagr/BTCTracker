@@ -14,8 +14,7 @@ function keepAlive() {
   });
 }
 
-const url =
-  "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd";
+const url = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd";
 let lastPrice;
 
 const client = new Client({
@@ -34,8 +33,8 @@ client.once("ready", () => {
 
   setInterval(async () => {
     getPrice();
-    BOT.user.setActivity("BTC: " + lastPrice);
-  }, 5000);
+    BOT.user.setActivity("BTC: " + lastPrice + '$', { type: "WATCHING" }).catch(console.error);
+  }, 10000);
 });
 
 function getPrice() {
