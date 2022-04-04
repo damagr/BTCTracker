@@ -1,7 +1,7 @@
 {
-  "name": "ethereumtracker",
+  "name": "btctracker",
   "version": "1.0.0",
-  "description": "ethereumtracker",
+  "description": "btctracker",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
